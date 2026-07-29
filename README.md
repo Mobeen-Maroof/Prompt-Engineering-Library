@@ -1,6 +1,6 @@
 # 🚀 Prompt Engineering Library
 
-A complete Prompt Engineering Week 1 portfolio demonstrating practical prompt engineering techniques using ChatGPT. This repository contains seven days of hands-on exercises covering prompt design, system prompts, roles, few-shot learning, structured outputs, hallucination reduction, and a reusable Prompt Pattern Library.
+A complete Prompt Engineering Week 1 portfolio demonstrating practical prompt engineering techniques. This repository contains seven days of hands-on exercises covering prompt design, system prompts, roles, few-shot learning, structured outputs, hallucination reduction, and a reusable Prompt Pattern Library.
 
 ---
 
