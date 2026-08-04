@@ -1,6 +1,6 @@
 # Day 8 – Chain-of-Thought (CoT) Reasoning
 
-## 📌 Objective
+## Objective
 
 The objective of this exercise is to understand how different prompting strategies affect AI reasoning and problem-solving. This activity compares four prompting approaches—No Reasoning, Basic Chain-of-Thought (CoT), Guided CoT, and Structured CoT—using multiple reasoning tasks.
 
