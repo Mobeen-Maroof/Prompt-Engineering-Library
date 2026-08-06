@@ -16,7 +16,7 @@ In this activity, a Pydantic model was created to define the expected output for
 
 # Technologies Used
 
-- Python 3
+- Python 
 - Pydantic
 - JSON
 - ChatGPT
