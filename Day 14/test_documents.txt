@@ -1,0 +1,59 @@
+Document 1
+
+Product: Laptop
+Category: Electronics
+Price: 850.50
+Available: Yes
+
+------------------------------------
+
+Document 2
+
+Product: Notebook
+Category: Stationery
+Price: 5.99
+Available: Yes
+
+------------------------------------
+
+Document 3
+
+Product: Headphones
+Category: Electronics
+Price: 49.99
+Available: No
+
+------------------------------------
+
+Document 4
+
+Product: Chair
+Category: Furniture
+Price: ABC
+Available: Yes
+
+------------------------------------
+
+Document 5
+
+Product: Bottle
+Category: Kitchen
+Available: Yes
+
+------------------------------------
+
+Document 6
+
+Product: Mouse
+Category: Electronics
+Price: 20.99
+Available: Yes
+
+------------------------------------
+
+Document 7
+
+Product: Keyboard
+Category: Electronics
+Price: 35.50
+Available: No
