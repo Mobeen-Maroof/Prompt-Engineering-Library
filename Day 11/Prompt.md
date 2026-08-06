@@ -7,19 +7,27 @@ The objective of this exercise is to improve the quality of AI-generated content
 ---
 
 # Task
-
 Summarize an article about Artificial Intelligence.
+
+## Article
+Artificial Intelligence (AI) is transforming industries by enabling machines to perform tasks that usually require human intelligence. AI is widely used in healthcare for disease diagnosis, in education for personalized learning, in finance for fraud detection, and in transportation for self-driving vehicles. Despite its benefits, AI also raises ethical concerns such as data privacy, bias, and job displacement.
 
 ---
 
 # Single Prompt
 
 ## Prompt
-
 Summarize the following article in about 80 words.
 
-## Observation
+Article:
 
+Artificial Intelligence (AI) is transforming industries by enabling machines to perform tasks that usually require human intelligence. AI is widely used in healthcare for disease diagnosis, in education for personalized learning, in finance for fraud detection, and in transportation for self-driving vehicles. Despite its benefits, AI also raises ethical concerns such as data privacy, bias, and job displacement.
+
+## AI Response
+<img width="1155" height="745" alt="image" src="https://github.com/user-attachments/assets/5adb1627-6a90-4a9c-81f0-892f2d79bf4b" />
+
+---
+## Observation
 The AI generated a reasonable summary in one step, but there was no opportunity to review or improve the output before finalizing it.
 
 ---
@@ -27,11 +35,19 @@ The AI generated a reasonable summary in one step, but there was no opportunity 
 # Prompt Chaining
 
 ## Step 1 – Draft
+Create the first draft of a summary for the following article.
 
-The AI created an initial summary.
+Maximum 80 words.
+
+Article:
+
+Artificial Intelligence (AI) is transforming industries by enabling machines to perform tasks that usually require human intelligence. AI is widely used in healthcare for disease diagnosis, in education for personalized learning, in finance for fraud detection, and in transportation for self-driving vehicles. Despite its benefits, AI also raises ethical concerns such as data privacy, bias, and job displacement.
 
 ---
+## AI Response
+<img width="1127" height="676" alt="image" src="https://github.com/user-attachments/assets/934a5d8f-b1a6-428a-b805-e36523733f18" />
 
+---
 ## Step 2 – Critique
 
 The summary was evaluated using the following rubric:
@@ -44,11 +60,19 @@ The summary was evaluated using the following rubric:
 Each criterion received a score and improvement suggestions.
 
 ---
+## AI Response
+<img width="1191" height="772" alt="image" src="https://github.com/user-attachments/assets/b15a37ac-146e-4524-b05c-5e9066cfb1f1" />
+<img width="1231" height="665" alt="image" src="https://github.com/user-attachments/assets/75ed0246-e7e8-4a61-beb1-b04d420b18c2" />
 
+---
 ## Step 3 – Refine
 
 The AI rewrote the summary using the critique feedback.
 
+## AI Response
+<img width="1238" height="709" alt="image" src="https://github.com/user-attachments/assets/89ef2044-6875-4953-8fd9-b51784a60810" />
+
+---
 The final version became clearer, more accurate, and easier to read.
 
 ---
