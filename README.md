@@ -140,15 +140,130 @@ Each template includes:
 - Improved Prompt
 - Output comparison
 
+## ✅ Day 8 – Chain-of-Thought Reasoning
+
+### Topics Covered
+- Chain-of-Thought (CoT)
+- Guided Reasoning
+- Structured Reasoning
+- Multi-step Problem Solving
+
+### Activities
+- Solved multi-step reasoning problems
+- Compared plain prompting with Chain-of-Thought prompting
+- Tested guided and structured reasoning techniques
+- Evaluated reasoning accuracy across different prompts
+
+---
+
+## ✅ Day 9 – Self-Consistency
+
+### Topics Covered
+- Self-Consistency
+- Multiple Response Sampling
+- Majority Voting
+- Ensemble Reasoning
+
+### Activities
+- Asked the same reasoning question multiple times
+- Compared single-response and majority-vote results
+- Implemented a simple self-consistency function in Python
+- Evaluated accuracy improvements
+
+---
+
+## ✅ Day 10 – Decomposition (Self-Ask, Least-to-Most & Tree of Thoughts)
+
+### Topics Covered
+- Self-Ask Prompting
+- Least-to-Most Reasoning
+- Tree of Thoughts
+- Problem Decomposition
+
+### Activities
+- Broke complex questions into smaller sub-problems
+- Solved multi-hop reasoning tasks
+- Compared direct prompting with decomposed prompting
+- Created reusable decomposition prompts
+
+---
+
+## ✅ Day 11 – Prompt Chaining
+
+### Topics Covered
+- Prompt Chaining
+- Draft → Critique → Refine Workflow
+- Multi-step AI Workflows
+
+### Activities
+- Compared single-prompt and multi-step prompting
+- Generated draft responses
+- Critiqued AI-generated outputs
+- Refined responses using feedback
+
+---
+
+## ✅ Day 12 – Structured Outputs & Validation
+
+### Topics Covered
+- Structured JSON Outputs
+- Pydantic Validation
+- Auto-Retry Logic
+- Schema-Based Responses
+
+### Activities
+- Built Pydantic schemas
+- Generated structured JSON responses
+- Validated AI outputs using Python
+- Tested invalid and incomplete inputs
+- Implemented validation and retry logic
+
+---
+
+## ✅ Day 13 – Meta Prompting
+
+### Topics Covered
+- Meta Prompting
+- Prompt Improvement
+- Prompt Templates
+- Parameterized Prompts
+
+### Activities
+- Created a reusable Prompt Improver
+- Improved three existing prompt templates
+- Compared original and improved prompts
+- Designed reusable parameterized templates using placeholders
+
+---
+
+## ✅ Day 14 – Structured Extraction Pipeline (Final Project)
+
+### Topics Covered
+- Structured Extraction Pipeline
+- Self-Critique
+- Automatic Correction
+- Schema Validation
+- End-to-End AI Workflow
+
+### Activities
+- Built a four-stage extraction pipeline
+- Extracted structured JSON from unstructured documents
+- Implemented self-critique and correction stages
+- Validated outputs with Pydantic
+- Tested the pipeline using multiple sample documents
+- Documented the complete workflow in GitHub
+
 ---
 
 # 🛠️ Technologies Used
 
 - ChatGPT
+- Python
+- Pydantic
+- JSON
 - Markdown
-- GitHub
-- Python (JSON Validation)
-
+- Git & GitHub
+- Visual Studio Code
 ---
 
 # 📂 Repository Structure
@@ -182,9 +297,40 @@ Prompt-Engineering-Library
 │   ├── Prompt.md
 │   └── screenshots
 │
-└── Day7
-    ├── prompt.md
-    └── screenshots
+├── Day7
+│   ├── Prompt.md
+│   └── screenshots
+│
+├── Day8
+│   ├── homework.md
+│   └── screenshots
+│
+├── Day9
+│   ├── homework.md
+│   ├── self_consistency.py
+│   └── screenshots
+│
+├── Day10
+│   ├── homework.md
+│   └── screenshots
+│
+├── Day11
+│   ├── homework.md
+│   └── screenshots
+│
+├── Day12
+│   ├── homework.md
+│   ├── structured_output.py
+│   └── screenshots
+│
+├── Day13
+│   ├── homework.md
+│   └── screenshots
+│
+└── Day14
+    ├── Prompt.md
+    ├── extraction_pipeline.py
+    └──  test_documents.txt
 ```
 
 ---
@@ -194,37 +340,46 @@ Prompt-Engineering-Library
 - Prompt Engineering
 - System Prompt Design
 - Prompt Optimization
-- Few-shot Prompting
-- Output Formatting
+- Zero-shot, One-shot & Few-shot Prompting
+- Chain-of-Thought Reasoning
+- Self-Consistency
+- Prompt Chaining
+- Meta Prompting
+- Structured Output Generation
 - JSON Extraction
+- Pydantic Validation
+- Data Validation
+- AI Workflow Design
 - Prompt Evaluation
-- AI Reliability
 - Hallucination Reduction
-- Prompt Pattern Design
-
+- Python Programming
 ---
 
 # 📖 Key Learning Outcomes
 
-By completing this project, I learned how to:
+By completing this two-week Prompt Engineering project, I learned how to:
 
-- Write effective prompts for AI models.
-- Improve response quality using context and examples.
-- Control response formats using structured instructions.
-- Build reusable prompt templates.
-- Prevent AI hallucinations through grounding.
-- Design professional AI workflows.
-
+- Design effective prompts for AI models.
+- Improve AI responses using roles, context, and examples.
+- Control response formats using JSON and Markdown.
+- Apply Zero-shot, One-shot, and Few-shot prompting techniques.
+- Solve complex reasoning tasks using Chain-of-Thought and Self-Consistency.
+- Build multi-step AI workflows with Prompt Chaining.
+- Improve prompts using Meta Prompting.
+- Validate AI-generated structured outputs using Pydantic.
+- Build a complete structured extraction pipeline.
+- Develop reusable prompt templates for real-world AI applications.
 ---
 
 # 🌟 Future Improvements
 
-- Add Chain-of-Thought prompting examples.
 - Explore Retrieval-Augmented Generation (RAG).
-- Integrate Prompt Engineering with AI applications.
-- Build prompt testing automation.
-- Create a larger Prompt Pattern Library.
-
+- Learn Function Calling and AI Agents.
+- Build AI-powered automation workflows.
+- Integrate prompt engineering with web applications.
+- Expand the Prompt Template Library.
+- Add support for document and PDF extraction.
+- Develop production-ready AI pipelines.
 ---
 
 # 📜 License
