@@ -2,7 +2,7 @@
 
 ## Overview
 
-This exercise demonstrates the concept of **Context Engineering**, which focuses on organizing information efficiently so that Large Language Models (LLMs) receive only the most relevant context. The goal is to compare different prompting strategies and determine which one provides the best answer while using the fewest tokens. :contentReference[oaicite:0]{index=0}
+This exercise demonstrates the concept of **Context Engineering**, which focuses on organizing information efficiently so that Large Language Models (LLMs) receive only the most relevant context. The goal is to compare different prompting strategies and determine which one provides the best answer while using the fewest tokens.
 
 ---
 
@@ -80,7 +80,7 @@ Question:
 What is Prompt Engineering?
 ```
 
-This strategy places the question after the context, following the guide's recommendation to reduce the "lost in the middle" effect. :contentReference[oaicite:1]{index=1}
+This strategy places the question after the context, following the guide's recommendation to reduce the "lost in the middle" effect.
 
 ### Output
 
@@ -149,7 +149,7 @@ Three different context engineering strategies were tested.
 
 ### Reason
 
-Providing only the relevant context is the most efficient approach because it minimizes token usage while maintaining answer quality. This aligns with the guide's principle of treating the context window as a limited budget and avoiding unnecessary information. :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3}
+Providing only the relevant context is the most efficient approach because it minimizes token usage while maintaining answer quality. This aligns with the guide's principle of treating the context window as a limited budget and avoiding unnecessary information.
 
 ---
 
