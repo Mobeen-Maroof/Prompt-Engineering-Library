@@ -228,7 +228,7 @@ The information is not available in the knowledge base, so the model correctly r
 
 # Conclusion
 
-This exercise demonstrates how Retrieval-Augmented Generation (RAG) improves the reliability of AI-generated responses by grounding answers in retrieved documents. Using a grounding prompt with citations ensures transparency, while the refusal mechanism prevents the model from generating unsupported information. The experiment highlights that trustworthy AI systems depend on both accurate retrieval and strict adherence to the provided sources. :contentReference[oaicite:2]{index=2}
+This exercise demonstrates how Retrieval-Augmented Generation (RAG) improves the reliability of AI-generated responses by grounding answers in retrieved documents. Using a grounding prompt with citations ensures transparency, while the refusal mechanism prevents the model from generating unsupported information. The experiment highlights that trustworthy AI systems depend on both accurate retrieval and strict adherence to the provided sources.
 
 ---
 
