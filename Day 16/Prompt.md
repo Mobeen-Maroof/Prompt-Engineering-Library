@@ -2,7 +2,7 @@
 
 ## Overview
 
-This exercise demonstrates **Retrieval-Augmented Generation (RAG)**, a technique that improves the reliability of AI responses by retrieving relevant information from external documents before generating an answer. Instead of relying on the model's memory, the AI is instructed to answer **only from the provided sources**, include citations, and refuse to answer if the information is unavailable. This exercise follows the Day 16 homework requirements from the Prompt Engineering Week 3 guide. :contentReference[oaicite:0]{index=0}
+This exercise demonstrates **Retrieval-Augmented Generation (RAG)**, a technique that improves the reliability of AI responses by retrieving relevant information from external documents before generating an answer. Instead of relying on the model's memory, the AI is instructed to answer **only from the provided sources**, include citations, and refuse to answer if the information is unavailable.
 
 ---
 
