@@ -1,0 +1,23 @@
+============================================================
+Week 3 Capstone Agent
+============================================================
+
+Question:
+Calculate (25+15)*4
+
+Step 1
+
+Thought:
+The user wants a calculation.
+
+Action:
+calculator("(25+15)*4")
+
+Observation:
+160
+
+Reflection:
+The calculation completed successfully.
+
+Final Answer:
+160

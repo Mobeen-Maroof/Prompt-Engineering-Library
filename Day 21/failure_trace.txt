@@ -1,0 +1,17 @@
+============================================================
+Week 3 Capstone Agent
+============================================================
+
+Question:
+Find the happiness index of dreams.
+
+Step 1
+
+Thought:
+No suitable tool is available.
+
+Reflection:
+Stop execution gracefully.
+
+Final Result:
+Unable to complete the request.
