@@ -104,7 +104,7 @@ Question:
 {User Question}
 ```
 
-This prompt enforces grounding, citations, and a clear refusal when the answer is not present, which are the key ideas emphasized in the guide. :contentReference[oaicite:1]{index=1}
+This prompt enforces grounding, citations, and a clear refusal when the answer is not present, which are the key ideas emphasized in the guide.
 
 ---
 
