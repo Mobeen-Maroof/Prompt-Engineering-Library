@@ -1,41 +1,71 @@
-from tool import calculator, get_current_time
+from ollama import chat
+from tool import calculator, current_time
 
-def execute_tool(tool_name, argument=None):
+available_tools = {
+    "calculator": calculator,
+    "current_time": current_time,
+}
 
-    if tool_name == "calculator":
-        return calculator(argument)
+messages = []
 
-    elif tool_name == "get_current_time":
-        return get_current_time()
+while True:
+
+    user_input = input("\nYou: ")
+
+    if user_input.lower() == "exit":
+        break
+
+    messages.append(
+        {
+            "role": "user",
+            "content": user_input,
+        }
+    )
+
+    response = chat(
+        model="llama3.2",
+        messages=messages,
+        tools=[calculator, current_time],
+    )
+
+    messages.append(response.message)
+
+    if response.message.tool_calls:
+
+        for tool in response.message.tool_calls:
+
+            function_name = tool.function.name
+            arguments = tool.function.arguments
+
+            function = available_tools.get(function_name)
+
+            if function:
+
+                if arguments:
+                    result = function(**arguments)
+                else:
+                    result = function()
+
+                print(f"\nTool Used : {function_name}")
+                print("Tool Result:", result)
+
+                messages.append(
+                    {
+                        "role": "tool",
+                        "tool_name": function_name,
+                        "content": str(result),
+                    }
+                )
+
+        final = chat(
+            model="llama3.2",
+            messages=messages,
+        )
+
+        print("\nAssistant:", final.message.content)
+
+        messages.append(final.message)
 
     else:
-        return "Tool Not Found"
 
-
-print("Question 1")
-print("User: What is 25 * 8?")
-print("Tool:", execute_tool("calculator", "25*8"))
-
-print()
-
-print("Question 2")
-print("User: What is 150 / 5?")
-print("Tool:", execute_tool("calculator", "150/5"))
-
-print()
-
-print("Question 3")
-print("User: What time is it?")
-print("Tool:", execute_tool("get_current_time"))
-
-print()
-
-print("Question 4")
-print("User: Calculate (20+30)*5")
-print("Tool:", execute_tool("calculator", "(20+30)*5"))
-
-print()
-
-print("Question 5")
-print("User: Hello")
-print("Assistant: Hello! How can I help you?")
+        print("\nAssistant:", response.message.content)
