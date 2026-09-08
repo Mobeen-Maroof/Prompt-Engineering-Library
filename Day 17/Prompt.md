@@ -1,106 +1,147 @@
-# Day 17 – Tool Use
+# Day 17 – AI Tool Calling
 
-## Overview
+## 📌 Overview
 
-This project demonstrates how an AI model can use external tools through function calling. Two tools were implemented:
+This project demonstrates AI Tool Calling using **Ollama** and the **Llama 3.2** model.
 
-1. Calculator
-2. Current Time
+Unlike traditional rule-based programs, the AI model decides which tool to use based on the user's request. The application integrates external Python functions (tools) that the model can invoke dynamically.
 
-The system follows the Tool Use workflow:
+---
 
+## 🎯 Objective
+
+The objective of this project is to demonstrate how a Large Language Model (LLM) can intelligently select and execute external tools instead of relying on hardcoded conditions.
+
+---
+
+## 🛠️ Tools
+
+### Calculator Tool
+- Evaluates mathematical expressions.
+- Examples:
+  - `25+8`
+  - `(20+30)*5`
+  - `150/5`
+
+### Current Time Tool
+- Returns the current local system time.
+
+---
+
+## 🏗️ Project Structure
+
+```
+Day17_AI_Tool_Calling/
+│
+├── tools.py
+├── main.py
+└── README.md
+```
+
+---
+
+## ⚙️ Technologies Used
+
+- Python
+- Ollama
+- Llama 3.2
+- Function Calling
+- Tool Calling
+
+---
+
+## 🔄 Workflow
+
+```
 User Question
-
-↓
-
+      │
+      ▼
+Large Language Model (LLM)
+      │
+      ▼
 Tool Selection
-
-↓
-
-Execute Tool
-
-↓
-
-Return Result
+      │
+      ▼
+Python Tool Execution
+      │
+      ▼
+Tool Result
+      │
+      ▼
+LLM Final Response
+```
 
 ---
 
-## Tool 1
+## 💻 Example
 
-### Name
+### Input
 
+```
+What is 25+8?
+```
+
+### Tool Selected
+
+```
 calculator
+```
 
-### Description
+### Output
 
-Evaluates mathematical expressions provided by the user.
-
-Example
-
-25*8
-
-Result
-
-200
+```
+33
+```
 
 ---
 
-## Tool 2
+### Input
 
-### Name
+```
+What time is it?
+```
 
-get_current_time
+### Tool Selected
 
-### Description
+```
+current_time
+```
 
-Returns the current system time.
+### Output
+
+```
+05:53 PM
+```
+
+---
+## Screenshots of Code
+<img width="950" height="874" alt="image" src="https://github.com/user-attachments/assets/94384032-b407-4384-a419-d7e2ce9f2682" />
+<img width="872" height="928" alt="image" src="https://github.com/user-attachments/assets/e45910b2-843c-4df3-83a1-f33ec8b88423" />
+<img width="858" height="822" alt="image" src="https://github.com/user-attachments/assets/24aa71f0-45c2-4ce3-8eb2-0cf088d70301" />
+<img width="1114" height="460" alt="image" src="https://github.com/user-attachments/assets/aefc26cf-18ad-46a3-a878-063a1bebb5f5" />
+
+## Screenshot of Output
+<img width="962" height="886" alt="image" src="https://github.com/user-attachments/assets/b689b07e-fe34-4abf-be79-fe12cfbe4f87" />
+
+## 📚 Learning Outcomes
+
+- Understand AI Tool Calling.
+- Integrate Python functions as external tools.
+- Allow an LLM to decide which tool to execute.
+- Build an intelligent assistant without hardcoded decision logic.
 
 ---
 
-## Call → Execute → Return Loop
+## 🚀 Future Improvements
 
-1. User asks a question.
-2. The assistant determines which tool is required.
-3. The selected tool executes.
-4. The result is returned to the user.
-
----
-
-## Screenshots
-<img width="963" height="590" alt="image" src="https://github.com/user-attachments/assets/b9d150c9-9c7b-4f5f-8bab-ec5c5aa400db" />
-<img width="841" height="715" alt="image" src="https://github.com/user-attachments/assets/1dc7503f-035d-4799-805a-b38c19dcf846" />
-<img width="892" height="715" alt="image" src="https://github.com/user-attachments/assets/aaf4a0d3-38fa-496a-a7ee-6af7d05db3dc" />
-<img width="427" height="434" alt="image" src="https://github.com/user-attachments/assets/f12f4030-8c17-4c9a-9558-1c65020711d9" />
-
-
-## Test Cases
-
-| User Question | Tool Used | Result |
-|--------------|-----------|--------|
-| What is 25×8? | Calculator | 200 |
-| What is 150/5? | Calculator | 30 |
-| What time is it? | Current Time | Current Time |
-| Calculate (20+30)*5 | Calculator | 250 |
-| Hello | None | Greeting |
+- Add weather and web search tools.
+- Integrate OpenAI API.
+- Add conversation memory.
+- Support multiple tool calls in one interaction.
+- Improve error handling and validation.
 
 ---
 
-## Broken Tool Description
+## 👨‍💻 Author
 
-### Good Description
-
-Returns the current system time whenever the user asks for time.
-
-### Bad Description
-
-Gets information.
-
-Result:
-
-The vague description does not clearly indicate the tool's purpose, making it difficult for an AI system to determine when it should be used.
-
----
-
-## Conclusion
-
-This exercise demonstrates that tool descriptions act as prompts for AI systems. Clear and specific descriptions improve tool selection, while vague descriptions reduce accuracy and may lead to incorrect tool usage.
+**Mobeen Maroof**
