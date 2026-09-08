@@ -1,17 +1,26 @@
 from datetime import datetime
 
-def calculator(expression):
+def calculator(expression: str) -> str:
     """
-    Evaluates a mathematical expression.
+    Evaluate a mathematical expression.
+
+    Args:
+        expression: Mathematical expression such as "25+8"
+
+    Returns:
+        Result of the calculation.
     """
     try:
-        return eval(expression)
-    except Exception:
-        return "Invalid Expression"
+        return str(eval(expression))
+    except Exception as e:
+        return f"Error: {e}"
 
 
-def get_current_time():
+def current_time() -> str:
     """
-    Returns the current system time.
+    Return the current system time.
+
+    Returns:
+        Current local time.
     """
     return datetime.now().strftime("%I:%M:%S %p")
