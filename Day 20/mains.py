@@ -1,22 +1,30 @@
-from researcher import research
-from writer import write_article
+from agents import research_agent, writer_agent
 
-topic = "Artificial Intelligence"
+print("=" * 60)
+print("         Day 20 - Multi-Agent System")
+print("=" * 60)
 
-print("="*60)
-print("Multi-Agent System Demo")
-print("="*60)
+while True:
 
-print("\nAgent 1 : Researcher")
+    topic = input("\nEnter a topic (or type 'exit' to quit): ")
 
-research_data = research(topic)
+    if topic.lower() == "exit":
+        print("\nGoodbye!")
+        break
 
-print(research_data)
+    print("\n🔍 Research Agent is working...")
+    research = research_agent(topic)
 
-print("\nPassing information to Writer Agent...\n")
+    print("\n==============================")
+    print("Research Notes")
+    print("==============================")
+    print(research)
 
-print("Agent 2 : Writer\n")
+    print("\n✍️ Writer Agent is writing...")
 
-article = write_article(research_data)
+    final_answer = writer_agent(topic, research)
 
-print(article)
+    print("\n==============================")
+    print("Final Answer")
+    print("==============================")
+    print(final_answer)
