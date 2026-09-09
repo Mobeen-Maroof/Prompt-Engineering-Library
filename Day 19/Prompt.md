@@ -1,111 +1,295 @@
-# Day 19 – Agents that Survive: Stop Conditions, Reflection & Guardrails
+# Day 19 – AI Guardrails Agent
 
-## Overview
+## 📌 Overview
 
-This project improves the ReAct agent developed on Day 18 by adding guardrails that make the agent safer and more reliable. The agent now limits the number of execution steps, allows only approved tools, includes a reflection step, and stops gracefully when it cannot complete a task.
+This project demonstrates the implementation of **AI Guardrails** using **Ollama** and the **Llama 3.2** model. The agent safely interacts with external tools while enforcing execution limits, handling tool failures gracefully, and preventing infinite reasoning loops.
 
----
-
-## Objective
-
-- Add a maximum step limit.
-- Add a step budget.
-- Restrict the agent to approved tools.
-- Add a reflection mechanism.
-- Demonstrate graceful failure.
+The project builds on the ReAct Agent (Day 18) by adding practical safety mechanisms that ensure reliable and controlled AI behavior.
 
 ---
 
-## Guardrails Implemented
+## 🎯 Objective
+
+The objective of this project is to design an AI agent with built-in guardrails that:
+
+- Limits the number of reasoning steps.
+- Prevents infinite execution loops.
+- Handles tool execution errors gracefully.
+- Blocks invalid or unsupported tool calls.
+- Produces safe and reliable responses.
+
+---
+
+## ✨ Features
+
+- 🤖 AI-powered reasoning using Llama 3.2
+- 🛡️ Guardrails for safe execution
+- 🔢 Calculator tool
+- 🕒 Current time tool
+- 🔄 Step limit protection (`MAX_STEPS`)
+- ⚠️ Graceful error handling
+- 🚫 Unknown tool protection
+- 💬 Interactive command-line interface
+
+---
+
+## 📁 Project Structure
+
+```text
+Day19_Guardrails/
+│
+├── main.py
+├── guardrails_agent.py
+├── tools.py
+└── README.md
+```
+
+---
+
+## ⚙️ Technologies Used
+
+- Python
+- Ollama
+- Llama 3.2
+- AI Guardrails
+- Tool Calling
+- ReAct Pattern
+
+---
+
+## 🛡️ Guardrails Implemented
 
 ### 1. Maximum Step Limit
 
-The agent stops after five execution steps to prevent infinite loops.
+The agent limits its reasoning process using a configurable maximum number of reasoning steps.
+
+```python
+MAX_STEPS = 5
+```
+
+This prevents infinite loops during execution.
 
 ---
 
-### 2. Step Budget
+### 2. Unknown Tool Protection
 
-The agent has a fixed execution budget. If the budget is exceeded, execution stops automatically.
+If the AI requests a tool that is not available, the execution is safely blocked.
 
----
+Example:
 
-### 3. Allowed Tools
-
-Only the following tool is permitted:
-
-- Calculator
-
-Any unapproved tool request is rejected.
+```
+Guardrail: Unknown tool blocked.
+```
 
 ---
 
-### 4. Reflection
+### 3. Tool Error Handling
 
-After each action, the agent evaluates whether the task has been completed or if another strategy is needed.
+Every tool execution is wrapped inside a `try-except` block to prevent the application from crashing due to runtime errors.
 
----
+Example:
 
-## Successful Execution
-
-### Question
-
-Calculate (15 + 25) × 3
-
-### Thought
-
-Use the calculator tool.
-
-### Action
-
-calculator("(15+25)*3")
-
-### Observation
-
-120
-
-### Reflection
-
-The calculation completed successfully.
-
-### Final Answer
-
-120
+```
+Guardrail: Tool execution failed.
+```
 
 ---
 
-## Screenshots
-<img width="819" height="684" alt="image" src="https://github.com/user-attachments/assets/53baf9d0-a161-4631-a471-bc9249c95056" />
-<img width="1002" height="889" alt="image" src="https://github.com/user-attachments/assets/58968dce-1bd0-413d-9130-ca0b67142668" />
-<img width="1164" height="867" alt="image" src="https://github.com/user-attachments/assets/4dec694d-9b0d-47f3-8034-3b0faef634a1" />
-<img width="943" height="845" alt="image" src="https://github.com/user-attachments/assets/c69fc531-555f-465b-9917-4bd815167108" />
+### 4. Safe Termination
 
-## Graceful Failure Example
+If the maximum reasoning limit is reached, the agent stops execution gracefully.
 
-### Question
+Example:
 
-Find the square root of happiness.
-
-### Thought
-
-The available tools cannot solve this request.
-
-### Reflection
-
-Stop execution instead of repeating failed attempts.
-
-### Final Result
-
-Stopped gracefully because no suitable tool exists.
+```
+Guardrail: Maximum reasoning steps reached.
+```
 
 ---
 
-## Reflection
+## 🔄 Workflow
 
-The most important guardrail in this project was the maximum step limit because it prevents infinite loops and ensures that the agent always terminates safely. Reflection also improves reliability by allowing the agent to recognize when a task cannot be completed using the available tools.
+```text
+User Question
+      │
+      ▼
+AI Reasoning
+      │
+      ▼
+Guardrail Validation
+      │
+      ▼
+Tool Selection
+      │
+      ▼
+Tool Execution
+      │
+      ▼
+Observation
+      │
+      ▼
+Final AI Response
+```
+
+---
+## Screenshots of Code
+<img width="988" height="516" alt="image" src="https://github.com/user-attachments/assets/ab12e28e-9b49-419e-85e5-9682b6b072d5" />
+<img width="958" height="896" alt="image" src="https://github.com/user-attachments/assets/79323242-356f-487b-85fc-cec69ae2f84f" />
+<img width="1032" height="898" alt="image" src="https://github.com/user-attachments/assets/dc1985ea-8498-4b35-8569-66a7340a7aff" />
+<img width="1006" height="587" alt="image" src="https://github.com/user-attachments/assets/a2d24b2f-929f-44c2-add2-c85e5f721b1b" />
+<img width="925" height="932" alt="image" src="https://github.com/user-attachments/assets/f466e830-bddf-4f28-ab6a-9186ba4c6665" />
+<img width="764" height="270" alt="image" src="https://github.com/user-attachments/assets/786f450a-182f-4893-841a-b18105968c84" />
+
+## 🛠️ Available Tools
+
+### Calculator
+
+Performs mathematical calculations.
+
+Example:
+
+```
+What is 25 + 8?
+```
+
+Output:
+
+```
+33
+```
 
 ---
 
-## Learning Outcome
+### Current Time
 
-This exercise demonstrates that guardrails are essential for building reliable AI agents. By combining execution limits, tool restrictions, and self-reflection, the agent becomes more stable, predictable, and capable of handling failure gracefully.
+Returns the current local system time.
+
+Example:
+
+```
+What time is it?
+```
+
+Output:
+
+```
+06:01 PM
+```
+
+---
+
+## 💻 Sample Execution
+
+### Input
+
+```
+What is 25 + 8?
+```
+
+### Output
+
+```
+Action      : calculator
+Observation : 33
+
+Assistant:
+The result of 25 + 8 is 33.
+```
+
+---
+
+### Input
+
+```
+What time is it?
+```
+
+### Output
+
+```
+Action      : current_time
+Observation : 06:01 PM
+
+Assistant:
+The current time is 06:01 PM.
+```
+
+---
+## Screenshot of Output
+<img width="1212" height="910" alt="image" src="https://github.com/user-attachments/assets/eae0e448-f61c-484c-9f98-6a8606d96d31" />
+
+
+## 📚 Learning Outcomes
+
+Through this project, I learned how to:
+
+- Build AI applications with safety mechanisms.
+- Apply guardrails to control LLM behavior.
+- Prevent infinite reasoning loops.
+- Handle runtime errors safely.
+- Integrate external tools with AI models.
+- Build reliable AI agents using Python and Ollama.
+
+---
+
+## 🚀 Future Improvements
+
+- Input validation for user queries.
+- Logging and monitoring of agent actions.
+- Memory support for multi-turn conversations.
+- Multiple tool execution in one request.
+- Configurable guardrail policies.
+- Additional AI tools such as weather, web search, and file processing.
+
+---
+
+## ▶️ Installation
+
+### Install Ollama
+
+Download and install Ollama from the official website.
+
+### Pull the Model
+
+```bash
+ollama pull llama3.2
+```
+
+### Run the Project
+
+```bash
+py main.py
+```
+
+---
+
+## 🧪 Sample Questions
+
+```
+What is 25+8?
+
+What time is it?
+
+Calculate 25/0
+
+exit
+```
+
+---
+
+## 🎓 Key Concepts
+
+- AI Guardrails
+- Large Language Models (LLMs)
+- ReAct Agents
+- Tool Calling
+- Safe AI Execution
+- Error Handling
+- Step Budget
+- Responsible AI
+
+---
+
+## 👨‍💻 Author
+
+**Mobeen Maroof**
