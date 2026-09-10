@@ -1,109 +1,276 @@
-# Day 21 – Week 3 Capstone Project
+# Day 21 – AI Capstone Agent
 
-## Overview
+## 📌 Overview
 
-This project combines everything learned during Week 3 of Prompt Engineering into a single ReAct-style AI agent. The agent can reason about a task, select the appropriate tool, execute the tool, observe the result, reflect on the outcome, and provide a final answer. It also includes guardrails to ensure safe and reliable execution.
+The **AI Capstone Agent** is the final project that combines all the concepts learned throughout the AI Agents module into a single application. It integrates **Tool Calling**, **ReAct Reasoning**, **Guardrails**, and a **Multi-Agent System** using **Ollama** and the **Llama 3.2** model.
 
----
-
-## Features
-
-- Two working tools:
-  - Calculator
-  - Current Time
-- Thought → Action → Observation workflow
-- Reflection after each action
-- Maximum step limit
-- Allowed tools validation
-- Graceful failure handling
-- Success and failure execution traces
+The application allows the AI to dynamically decide when to use external tools, safely process user requests, collaborate between specialized AI agents, and provide intelligent responses through an interactive command-line interface.
 
 ---
 
-## Project Structure
+## 🎯 Objective
+
+The objective of this capstone project is to build a complete AI Agent that demonstrates:
+
+- AI Tool Calling
+- ReAct (Reason + Act) reasoning
+- AI Guardrails
+- Multi-Agent Collaboration
+- Interactive AI conversations
+
+---
+
+## ✨ Features
+
+- 🤖 AI-powered Assistant using Llama 3.2
+- 🔧 Dynamic Tool Calling
+- 🧠 ReAct (Reason + Act) workflow
+- 🛡️ Input validation and Guardrails
+- 👥 Research Agent and Writer Agent collaboration
+- 💬 Interactive command-line interface
+- ⚡ Modular project structure
+- 🔄 Real-time AI responses
+
+---
+
+## 📁 Project Structure
 
 ```text
-Day21_Final/
+Day21_Capstone_AI_Agent/
 │
-├── README.md
+├── main.py
+├── react_agent.py
+├── agents.py
+├── guardrails_agent.py
 ├── tools.py
-├── agent.py
-├── success_trace.txt
-└──  failure_trace.txt
+└── README.md
 ```
 
 ---
 
-## Example 1 – Successful Execution
+## ⚙️ Technologies Used
 
-**Question**
-
-Calculate (25+15)*4
-
-**Thought**
-
-The user wants to perform a calculation.
-
-**Action**
-
-calculator("(25+15)*4")
-
-**Observation**
-
-160
-
-**Reflection**
-
-The calculation completed successfully.
-
-**Final Answer**
-
-160
+- Python
+- Ollama
+- Llama 3.2
+- AI Tool Calling
+- ReAct Pattern
+- Multi-Agent Systems
+- Prompt Engineering
 
 ---
 
-## Example 2 – Graceful Failure
+## 🛠️ Components
 
-**Question**
+### 🔧 Tool Calling
 
-Find the happiness index of dreams.
+The AI dynamically selects and executes external tools when required.
 
-**Thought**
+Available tools:
 
-No suitable tool exists for this task.
+- Calculator
+- Current Time
 
-**Reflection**
+Example:
 
-Stop execution instead of entering an infinite loop.
+```
+What is 25 + 8?
+```
 
-**Final Result**
+Output
 
-Unable to complete the request.
-
----
-## Screenshots 
-<img width="943" height="827" alt="image" src="https://github.com/user-attachments/assets/4444e3bd-e051-4f5b-844a-a8178514e0cf" />
-<img width="818" height="873" alt="image" src="https://github.com/user-attachments/assets/8c178483-3a30-4265-bd4f-b8db2f8afce7" />
-
-## Guardrails
-
-- Maximum execution steps
-- Step budget
-- Allowed tools only
-- Reflection after each action
-- Graceful failure for unsupported requests
+```
+33
+```
 
 ---
 
-## Learning Outcome
+### 🧠 ReAct Agent
 
-This capstone project demonstrates how prompt engineering concepts can be combined to create a simple but reliable AI agent. By integrating tools, reasoning, guardrails, and reflection, the agent can complete supported tasks and fail safely when a request is beyond its capabilities.
+The ReAct Agent follows the Reason → Action → Observation workflow.
+
+Workflow:
+
+```
+User Question
+      │
+      ▼
+Reasoning
+      │
+      ▼
+Tool Selection
+      │
+      ▼
+Tool Execution
+      │
+      ▼
+Observation
+      │
+      ▼
+Final AI Response
+```
 
 ---
 
-## Future Improvements
+### 🛡️ Guardrails
 
-- Add web search as a third tool.
-- Connect the agent to a real LLM API.
-- Replace rule-based logic with model-driven tool selection.
-- Add Retrieval-Augmented Generation (RAG) support.
+The project includes safety mechanisms to improve reliability.
+
+Implemented guardrails:
+
+- Empty input validation
+- Maximum input length validation
+- Safe tool execution
+- Controlled application flow
+
+Example:
+
+```
+Input cannot be empty.
+```
+
+---
+
+### 👥 Multi-Agent System
+
+The project contains two specialized AI agents.
+
+#### 🔍 Research Agent
+
+Responsibilities:
+
+- Analyze user topics
+- Generate research notes
+- Gather useful information
+
+#### ✍️ Writer Agent
+
+Responsibilities:
+
+- Read research notes
+- Organize information
+- Produce a structured final response
+
+Workflow:
+
+```
+User
+   │
+   ▼
+Research Agent
+   │
+Research Notes
+   │
+   ▼
+Writer Agent
+   │
+Final Response
+```
+
+---
+
+## 💻 Sample Execution
+
+### Calculator
+<img width="938" height="393" alt="image" src="https://github.com/user-attachments/assets/63465206-b557-4ec9-adaf-1b2905ec1881" />
+
+### Time
+<img width="963" height="475" alt="image" src="https://github.com/user-attachments/assets/c2099256-74de-4e6d-9674-37844fa3d570" />
+
+### Multi-Agent
+Research Agent is working...
+<img width="1233" height="866" alt="image" src="https://github.com/user-attachments/assets/9d2c20d4-67a8-4bf0-af56-8e75058b8be9" />
+<img width="1208" height="913" alt="image" src="https://github.com/user-attachments/assets/c291d0b8-a0dd-4253-ae1f-6126179394f1" />
+<img width="1107" height="469" alt="image" src="https://github.com/user-attachments/assets/7c5bee20-c3e7-45d8-8568-1aa9b3f84ee6" />
+
+Writer Agent is writing...
+<img width="1237" height="898" alt="image" src="https://github.com/user-attachments/assets/a40bc2fa-14a3-4526-bdcd-88db396250bb" />
+<img width="1256" height="896" alt="image" src="https://github.com/user-attachments/assets/5686dd4c-c25c-4538-a4be-fc1d59a193b7" />
+<img width="1277" height="918" alt="image" src="https://github.com/user-attachments/assets/e10abcf1-6f2b-46b3-8614-5dab6d6c33ef" />
+
+
+---
+
+## 🚀 Installation
+
+### 1. Install Ollama
+
+Download and install Ollama.
+
+### 2. Pull the Model
+
+```bash
+ollama pull llama3.2
+```
+
+### 4. Run the Project
+
+```bash
+py main.py
+```
+
+---
+
+## 🧪 Example Commands
+
+```
+What is 25+8?
+
+What time is it?
+
+research: Artificial Intelligence
+
+research: Cyber Security
+
+research: Climate Change
+
+exit
+```
+
+---
+
+## 📚 Learning Outcomes
+
+Through this capstone project, I learned how to:
+
+- Build AI-powered applications using Python.
+- Integrate Large Language Models with external tools.
+- Implement the ReAct reasoning pattern.
+- Design AI Guardrails for safer execution.
+- Develop collaborative Multi-Agent Systems.
+- Structure modular AI projects.
+- Apply prompt engineering for specialized AI agents.
+
+---
+
+## 🔮 Future Improvements
+
+- Add memory for long conversations.
+- Integrate web search tools.
+- Support PDF and document analysis.
+- Add weather and news tools.
+- Develop a Streamlit or PyQt graphical interface.
+- Connect the application to external APIs.
+- Store conversation history in a database.
+
+---
+
+## 🎓 Key Concepts
+
+- Artificial Intelligence
+- AI Agents
+- Tool Calling
+- ReAct
+- Multi-Agent Systems
+- Prompt Engineering
+- Ollama
+- Llama 3.2
+- Python
+
+---
+
+## 👨‍💻 Author
+
+**Mobeen Maroof**
+
+Data Science Student
