@@ -255,10 +255,147 @@ Each template includes:
 
 ---
 
-# 🛠️ Technologies Used
+## ✅ Day 15 – AI Agent Fundamentals
 
+### Topics Covered
+
+- AI Agents
+- Agent Architecture
+- Planning
+- Perception
+- Action
+- Decision Making
+
+### Activities
+
+- Explored the fundamentals of AI Agents
+- Compared traditional software with AI agents
+- Studied the AI agent lifecycle
+- Designed a simple agent workflow
+- Documented agent architecture and components
+
+---
+
+## ✅ Day 16 – Retrieval-Augmented Generation (RAG)
+
+### Topics Covered
+
+- Retrieval-Augmented Generation (RAG)
+- Vector Databases
+- Embeddings
+- Grounding
+- Faithful Responses
+
+### Activities
+
+- Designed a RAG workflow
+- Created prompts with citation rules
+- Implemented hallucination reduction techniques
+- Compared grounded and ungrounded responses
+- Documented the complete RAG pipeline
+
+---
+
+## ✅ Day 17 – AI Tool Calling
+
+### Topics Covered
+
+- Tool Calling
+- Function Calling
+- External Tools
+- Dynamic Tool Selection
+
+### Activities
+
+- Built an AI Tool Calling application using Ollama
+- Implemented Calculator and Current Time tools
+- Enabled model-driven tool selection
+- Executed tools dynamically based on user requests
+- Built a modular tool-calling architecture
+
+---
+
+## ✅ Day 18 – ReAct Agent
+
+### Topics Covered
+
+- ReAct (Reason + Act)
+- Thought → Action → Observation
+- AI Reasoning Loops
+- Tool Integration
+
+### Activities
+
+- Built a ReAct AI Agent
+- Combined reasoning with external tool execution
+- Implemented the Thought → Action → Observation workflow
+- Allowed the model to choose tools dynamically
+- Generated final responses using tool outputs
+
+---
+
+## ✅ Day 19 – AI Guardrails
+
+### Topics Covered
+
+- AI Safety
+- Guardrails
+- Input Validation
+- Safe AI Execution
+
+### Activities
+
+- Built reusable AI guardrails
+- Validated user inputs
+- Added maximum input length checks
+- Prevented invalid requests
+- Improved AI reliability and robustness
+
+---
+
+## ✅ Day 20 – Multi-Agent Systems
+
+### Topics Covered
+
+- Multi-Agent Systems
+- Agent Collaboration
+- Task Delegation
+- AI Workflows
+
+### Activities
+
+- Developed a Research Agent
+- Developed a Writer Agent
+- Implemented agent-to-agent collaboration
+- Generated research notes before final responses
+- Built a modular multi-agent workflow
+
+---
+
+## ✅ Day 21 – AI Capstone Agent
+
+### Topics Covered
+
+- AI Tool Calling
+- ReAct
+- Guardrails
+- Multi-Agent Systems
+- AI Agent Integration
+
+### Activities
+
+- Built a complete AI Capstone Agent
+- Combined Tool Calling, ReAct, Guardrails, and Multi-Agent collaboration
+- Created an interactive AI assistant using Ollama and Llama 3.2
+- Implemented dynamic tool selection
+- Organized the project using a modular architecture
+
+
+# 🛠️ Technologies Used
 - ChatGPT
 - Python
+- Ollama
+- Llama 3.2
 - Pydantic
 - JSON
 - Markdown
@@ -327,10 +464,52 @@ Prompt-Engineering-Library
 │   ├── homework.md
 │   └── screenshots
 │
-└── Day14
-    ├── Prompt.md
-    ├── extraction_pipeline.py
-    └──  test_documents.txt
+├── Day14
+|    ├── Prompt.md
+|    ├── extraction_pipeline.py
+|    └──  test_documents.txt
+├── Day15
+│   ├── Prompt.md
+│   └── screenshots
+│
+├── Day16
+│   ├── Prompt.md
+│   └── screenshots
+│
+├── Day17_AI_Tool_Calling
+│   ├── main.py
+│   ├── tool.py
+│   ├── README.md
+│   └── screenshots
+│
+├── Day18_ReAct_Agent
+│   ├── main.py
+│   ├── react_agent.py
+│   ├── tool.py
+│   ├── README.md
+│   └── screenshots
+│
+├── Day19_Guardrails
+│   ├── main.py
+│   ├── guardrails_agent.py
+│   ├── tool.py
+│   ├── README.md
+│   └── screenshots
+│
+├── Day20_Multi_Agent
+│   ├── main.py
+│   ├── agents.py
+│   ├── README.md
+│   └── screenshots
+│
+└── Day21_Capstone_AI_Agent
+    ├── main.py
+    ├── react_agent.py
+    ├── agents.py
+    ├── guardrails_agent.py
+    ├── tool.py
+    ├── README.md
+    └── screenshots
 ```
 
 ---
@@ -353,6 +532,15 @@ Prompt-Engineering-Library
 - Prompt Evaluation
 - Hallucination Reduction
 - Python Programming
+- AI Agents
+- Tool Calling
+- ReAct Pattern
+- Guardrails
+- Multi-Agent Systems
+- Retrieval-Augmented Generation (RAG)
+- AI Workflow Design
+- Ollama
+- Llama 3.2
 ---
 
 # 📖 Key Learning Outcomes
@@ -369,22 +557,29 @@ By completing this two-week Prompt Engineering project, I learned how to:
 - Validate AI-generated structured outputs using Pydantic.
 - Build a complete structured extraction pipeline.
 - Develop reusable prompt templates for real-world AI applications.
+- Build AI agents using modern agent architectures.
+- Implement Retrieval-Augmented Generation (RAG).
+- Integrate Large Language Models with external tools.
+- Build ReAct-based reasoning agents.
+- Design AI guardrails for safer applications.
+- Develop collaborative multi-agent systems.
+- Create complete AI agent workflows using Ollama.
 ---
 
 # 🌟 Future Improvements
-
-- Explore Retrieval-Augmented Generation (RAG).
-- Learn Function Calling and AI Agents.
-- Build AI-powered automation workflows.
-- Integrate prompt engineering with web applications.
-- Expand the Prompt Template Library.
-- Add support for document and PDF extraction.
-- Develop production-ready AI pipelines.
+- Add long-term conversational memory.
+- Integrate web search tools.
+- Support PDF and document analysis.
+- Connect external APIs.
+- Develop Streamlit and PyQt interfaces.
+- Deploy AI agents as web applications.
+- Expand the Prompt Pattern Library.
+- Build production-ready AI agent pipelines.
 ---
 
 # 📜 License
 
-This repository is created for educational purposes as part of the Prompt Engineering Week 1 course.
+This repository is created for educational purposes as part of the Prompt Engineering course.
 
 ---
 
