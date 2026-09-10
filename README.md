@@ -1,6 +1,6 @@
 # 🚀 Prompt Engineering Library
 
-A complete Prompt Engineering Week 1 portfolio demonstrating practical prompt engineering techniques. This repository contains seven days of hands-on exercises covering prompt design, system prompts, roles, few-shot learning, structured outputs, hallucination reduction, and a reusable Prompt Pattern Library.
+A comprehensive Prompt Engineering and AI Agents portfolio demonstrating practical applications of Large Language Models (LLMs). This repository contains **21 days of hands-on projects** covering prompt engineering fundamentals, advanced reasoning techniques, structured outputs, Retrieval-Augmented Generation (RAG), AI Tool Calling, ReAct agents, Guardrails, Multi-Agent Systems, and a complete AI Capstone Agent built with Python and Ollama.
 
 ---
 
@@ -20,13 +20,16 @@ The purpose of this repository is to explore how different prompting techniques 
 
 # 🎯 Objectives
 
-- Learn Prompt Engineering fundamentals.
-- Understand how Large Language Models interpret prompts.
-- Design effective prompts using best practices.
-- Improve AI responses through prompt optimization.
-- Generate structured outputs such as JSON and Markdown tables.
-- Reduce hallucinations using grounding techniques.
-- Build a reusable Prompt Pattern Library.
+- Learn the fundamentals of Prompt Engineering and AI Agents.
+- Understand how Large Language Models (LLMs) interpret prompts and make decisions.
+- Design effective prompts using industry best practices.
+- Improve AI responses through prompt optimization and reasoning techniques.
+- Generate structured outputs such as JSON, Markdown tables, and validated schemas.
+- Reduce hallucinations using grounding and Retrieval-Augmented Generation (RAG).
+- Build reusable prompt templates and AI workflows.
+- Develop AI agents with Tool Calling, ReAct reasoning, and Guardrails.
+- Implement Multi-Agent Systems for collaborative problem-solving.
+- Build a complete AI Capstone Agent integrating modern LLM techniques.
 
 ---
 
