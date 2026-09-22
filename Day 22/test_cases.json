@@ -1,0 +1,82 @@
+[
+    {
+        "input": "The product is absolutely fantastic and works perfectly.",
+        "expected": "Positive"
+    },
+    {
+        "input": "I am extremely disappointed with this purchase.",
+        "expected": "Negative"
+    },
+    {
+        "input": "The delivery was quick, but the product quality was terrible.",
+        "expected": "Mixed"
+    },
+    {
+        "input": "I expected more, but overall I am happy with it.",
+        "expected": "Positive"
+    },
+    {
+        "input": "The design is beautiful, although the battery life is poor.",
+        "expected": "Mixed"
+    },
+    {
+        "input": "Nothing about this product impressed me.",
+        "expected": "Negative"
+    },
+    {
+        "input": "It is not bad at all. I actually really like it.",
+        "expected": "Positive"
+    },
+    {
+        "input": "The service was helpful, but the response took too long.",
+        "expected": "Mixed"
+    },
+    {
+        "input": "I would definitely recommend this product to my friends.",
+        "expected": "Positive"
+    },
+    {
+        "input": "I regret buying this product.",
+        "expected": "Negative"
+    },
+    {
+        "input": "The price is reasonable and the quality is excellent.",
+        "expected": "Positive"
+    },
+    {
+        "input": "The product looks great, but it stopped working after two days.",
+        "expected": "Mixed"
+    },
+    {
+        "input": "The item arrived late and was damaged.",
+        "expected": "Negative"
+    },
+    {
+        "input": "The camera quality is excellent, but the software is frustrating.",
+        "expected": "Mixed"
+    },
+    {
+        "input": "I have no complaints. Everything works as expected.",
+        "expected": "Positive"
+    },
+    {
+        "input": "The product is expensive, unreliable, and disappointing.",
+        "expected": "Negative"
+    },
+    {
+        "input": "I like the product overall, even though the packaging was poor.",
+        "expected": "Positive"
+    },
+    {
+        "input": "The food was delicious, but the restaurant service was very slow.",
+        "expected": "Mixed"
+    },
+    {
+        "input": "The quality is better than I expected.",
+        "expected": "Positive"
+    },
+    {
+        "input": "The product has some useful features, but it is difficult to use.",
+        "expected": "Mixed"
+    }
+]
