@@ -1,0 +1,159 @@
+description: "Day 23 - Promptfoo Sentiment Evaluation"
+
+prompts:
+  - |
+    Classify the following text as Positive, Negative, or Mixed.
+
+    Positive = mainly positive opinion.
+    Negative = mainly negative opinion.
+    Mixed = contains meaningful positive and negative opinions.
+
+    Return only one label:
+    Positive
+    Negative
+    Mixed
+
+    Text: {{text}}
+
+  - |
+    You are a strict sentiment classification system.
+
+    Classify the input into exactly ONE of these labels:
+    Positive
+    Negative
+    Mixed
+
+    Rules:
+    - Positive: the overall opinion is positive.
+    - Negative: the overall opinion is negative.
+    - Mixed: the text contains meaningful positive and negative opinions.
+
+    Read the entire text before deciding.
+    Do not explain your answer.
+    Return ONLY the label.
+
+    Text: {{text}}
+
+providers:
+  - id: ollama:chat:llama3.2
+
+tests:
+  - vars:
+      text: "The product is absolutely fantastic and works perfectly."
+    assert:
+      - type: equals
+        value: "Positive"
+
+  - vars:
+      text: "I am extremely disappointed with this purchase."
+    assert:
+      - type: equals
+        value: "Negative"
+
+  - vars:
+      text: "The delivery was quick, but the product quality was terrible."
+    assert:
+      - type: equals
+        value: "Mixed"
+
+  - vars:
+      text: "I expected more, but overall I am happy with it."
+    assert:
+      - type: equals
+        value: "Positive"
+
+  - vars:
+      text: "The design is beautiful, although the battery life is poor."
+    assert:
+      - type: equals
+        value: "Mixed"
+
+  - vars:
+      text: "Nothing about this product impressed me."
+    assert:
+      - type: equals
+        value: "Negative"
+
+  - vars:
+      text: "It is not bad at all. I actually really like it."
+    assert:
+      - type: equals
+        value: "Positive"
+
+  - vars:
+      text: "The service was helpful, but the response took too long."
+    assert:
+      - type: equals
+        value: "Mixed"
+
+  - vars:
+      text: "I would definitely recommend this product to my friends."
+    assert:
+      - type: equals
+        value: "Positive"
+
+  - vars:
+      text: "I regret buying this product."
+    assert:
+      - type: equals
+        value: "Negative"
+
+  - vars:
+      text: "The price is reasonable and the quality is excellent."
+    assert:
+      - type: equals
+        value: "Positive"
+
+  - vars:
+      text: "The product looks great, but it stopped working after two days."
+    assert:
+      - type: equals
+        value: "Mixed"
+
+  - vars:
+      text: "The item arrived late and was damaged."
+    assert:
+      - type: equals
+        value: "Negative"
+
+  - vars:
+      text: "The camera quality is excellent, but the software is frustrating."
+    assert:
+      - type: equals
+        value: "Mixed"
+
+  - vars:
+      text: "I have no complaints. Everything works as expected."
+    assert:
+      - type: equals
+        value: "Positive"
+
+  - vars:
+      text: "The product is expensive, unreliable, and disappointing."
+    assert:
+      - type: equals
+        value: "Negative"
+
+  - vars:
+      text: "I like the product overall, even though the packaging was poor."
+    assert:
+      - type: equals
+        value: "Positive"
+
+  - vars:
+      text: "The food was delicious, but the restaurant service was very slow."
+    assert:
+      - type: equals
+        value: "Mixed"
+
+  - vars:
+      text: "The quality is better than I expected."
+    assert:
+      - type: equals
+        value: "Positive"
+
+  - vars:
+      text: "The product has some useful features, but it is difficult to use."
+    assert:
+      - type: equals
+        value: "Mixed"
