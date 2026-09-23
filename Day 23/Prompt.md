@@ -200,6 +200,35 @@ PASS → Positive
 These examples demonstrate how Promptfoo identifies differences between prompt variants using the same test cases.
 
 ---
+## Screenshots of Output
+<img width="1363" height="884" alt="image" src="https://github.com/user-attachments/assets/3916554c-2eb1-4e85-9bd9-50fb4cf693ba" />
+<img width="1322" height="831" alt="image" src="https://github.com/user-attachments/assets/b44c84e7-87e1-4207-9ea2-899f10fdc7d7" />
+<img width="1320" height="854" alt="image" src="https://github.com/user-attachments/assets/d1a3ae5d-c82e-42c1-9a67-60405be05b3c" />
+<img width="1305" height="778" alt="image" src="https://github.com/user-attachments/assets/cf46ce39-354b-42a4-80b4-72466e7b3ca4" />
+
+---
+## Screenshot of browser
+<img width="1911" height="914" alt="image" src="https://github.com/user-attachments/assets/1c75adf3-b8c5-4f78-999b-22accb797907" />
+<img width="1896" height="814" alt="image" src="https://github.com/user-attachments/assets/fe851cb5-537a-4a7b-82c2-a12a91fb16d6" />
+<img width="1919" height="888" alt="image" src="https://github.com/user-attachments/assets/4c0950d5-8949-4d1c-97d8-2b9a6c2b96b6" />
+<img width="1896" height="868" alt="image" src="https://github.com/user-attachments/assets/eb6b3a9f-ec88-46f1-809b-7ed6334ba6ae" />
+<img width="1909" height="864" alt="image" src="https://github.com/user-attachments/assets/19a6d5c9-cd7f-4a87-8e0d-d3e8ec09f308" />
+<img width="1871" height="812" alt="image" src="https://github.com/user-attachments/assets/9cad640e-b653-4f5f-8f4d-a599123f1cba" />
+<img width="1883" height="751" alt="image" src="https://github.com/user-attachments/assets/d163515a-6f1b-4b5b-9082-a9af5e719a22" />
+<img width="1911" height="791" alt="image" src="https://github.com/user-attachments/assets/13783280-dad7-4a7c-aaaa-64ea37bebc41" />
+<img width="1899" height="866" alt="image" src="https://github.com/user-attachments/assets/4db93681-dccb-4d60-8de2-bf763649169d" />
+<img width="1869" height="829" alt="image" src="https://github.com/user-attachments/assets/42017bae-23b1-4adf-b315-556f262c6ac9" />
+<img width="1908" height="811" alt="image" src="https://github.com/user-attachments/assets/21918e9e-f017-4d02-8caf-cf09ab66a839" />
+### Prompt
+<img width="1853" height="829" alt="image" src="https://github.com/user-attachments/assets/12564925-fa10-4b5c-94d3-a1da3b3b0667" />
+<img width="1742" height="785" alt="image" src="https://github.com/user-attachments/assets/bbb7603e-8cf0-4779-a2e3-70c40d18de6a" />
+<img width="1721" height="800" alt="image" src="https://github.com/user-attachments/assets/8fbe5793-aab5-45b7-91ac-a393408cfbbc" />
+### Datasets
+<img width="1880" height="726" alt="image" src="https://github.com/user-attachments/assets/1dd51e05-7ae3-45f4-9246-ee59a199986d" />
+### History
+<img width="1880" height="892" alt="image" src="https://github.com/user-attachments/assets/b642c223-a4b6-474c-8a3f-ccc44c56697d" />
+
+---
 
 ## 🔄 Evaluation Workflow
 Day 22 Test Dataset
