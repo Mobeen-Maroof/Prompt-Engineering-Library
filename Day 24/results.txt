@@ -1,0 +1,14 @@
+Day 24 - DSPy Prompt Optimization Results
+==================================================
+
+Total Examples: 20
+Training Examples: 15
+Held-out Test Examples: 5
+
+Baseline Correct: 2/5
+Baseline Accuracy: 40.00%
+
+Optimized Correct: 4/5
+Optimized Accuracy: 80.00%
+
+Change: +40.00 percentage points
