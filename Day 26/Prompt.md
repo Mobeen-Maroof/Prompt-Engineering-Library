@@ -363,6 +363,3 @@ This project provides practical experience with **AI security, prompt injection 
 **Mobeen Maroof**
 
 Data Science Student | Prompt Engineering | AI Agents | Machine Learning
-
-
-After saving the README, **Day 26 will be ready for the GitHub upload/check**.
