@@ -1,0 +1,10 @@
+description: "Day 29-30 Secure Research Assistant Evaluation"
+
+providers:
+  - id: "exec:py provider.py"
+    label: "Research Assistant"
+
+prompts:
+  - "{{question}}"
+
+tests: tests.yaml
